@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        >
+
+    <!-- 底部工具栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touchdata_bottombar_height"
+        android:background="@color/trasparency"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/new_bottomBar_margenLeft"
+        android:paddingRight="@dimen/new_bottomBar_margenLeft"
+        >
+
+        <!-- 左边菜单 -->
+        <Button
+            android:id="@+id/menuBtn"
+            android:layout_width="@dimen/touchdata_bottom_btn_width"
+            android:layout_height="@dimen/touchdata_bottom_btn_height"
+            android:background="@mipmap/new_menu_btn_normal_icon"
+            android:layout_centerVertical="true"
+            />
+
+        <com.kedacom.touchdata.whiteboard.view.RemoteDcsOnOrOffBtn
+            android:id="@+id/joinConf"
+            android:layout_width="80dp"
+            android:layout_height="27dp"
+            android:text="加入会议"
+            android:layout_toRightOf="@+id/menuBtn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/mngerBtn"
+            android:layout_width="@dimen/touchdata_bottom_btn_width"
+            android:layout_height="@dimen/touchdata_bottom_btn_height"
+            android:background="@mipmap/req_oper_normal"
+            android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+            android:layout_toRightOf="@+id/joinConf"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+
+        <RelativeLayout
+            android:id="@+id/confMemberNumLayout"
+            android:layout_width="36dp"
+            android:layout_height="@dimen/touchdata_bottom_btn_height"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/joinConf"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            >
+
+            <Button
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@mipmap/local_member_pad_normal_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/confMemberNumTv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@mipmap/num_bg_icon"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="8sp"
+                />
+        </RelativeLayout>
+
+        <!-- 中间工具 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/insertImgBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@mipmap/new_insert_img_normal_icon"
+                />
+            <Button
+                android:id="@+id/selectImgBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@mipmap/new_select_img_normal_icon"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                />
+
+            <FrameLayout
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                >
+                <Button
+                    android:id="@+id/paintBtn"
+                    android:layout_width="@dimen/touchdata_bottom_btn_width"
+                    android:layout_height="@dimen/touchdata_bottom_btn_height"
+                    android:background="@mipmap/new_paint_select_icon"
+                    />
+                <ImageView
+                    android:id="@+id/paintColorIv"
+                    android:layout_width="@dimen/new_paintColorView_width"
+                    android:layout_height="@dimen/new_paintColorView_height"
+                    android:background="@color/white"
+                    android:layout_marginLeft="@dimen/new_paintColorView_x"
+                    android:layout_marginTop="@dimen/new_paintColorView_y"
+                    />
+            </FrameLayout>
+            <Button
+                android:id="@+id/eraseBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@mipmap/new_erase_normal_icon"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                />
+            <Button
+                android:id="@+id/undoBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/new_undo_btn_style"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                />
+            <Button
+                android:id="@+id/redoBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/new_redo_btn_style"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                />
+            <Button
+                android:id="@+id/selfAdaptionBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@mipmap/new_ws_normal_icon"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                />
+
+            <Button
+                android:id="@+id/reqOperBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/req_oper_btn_style"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/reqOperHintLy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="8dp"
+                    android:background="@mipmap/dialog_left_icon"
+                    android:layout_marginLeft="3dp"
+                    />
+
+            <TextView
+                android:id="@+id/reqOperHintTv"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:textColor="#b1b1b1"
+                android:textSize="11sp"
+                android:text="申请加入协作"
+                android:gravity="center"
+                android:background="#141414"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+            </LinearLayout>
+
+            <!-- 调试按钮-->
+            <Button
+                android:id="@+id/testBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@mipmap/new_ws_normal_icon"
+                android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <Button
+                android:id="@+id/addBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/new_add_page_btn_style"
+                />
+
+            <Button
+                android:id="@+id/prePageBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/new_pre_page_btn_style"
+                android:layout_marginLeft="@dimen/new_touchdata_bottom_btn_in_spacing"
+                />
+
+
+            <Button
+                android:id="@+id/pageNumBtn"
+                android:layout_width="@dimen/new_touchdata_bottom_btn_width"
+                android:layout_height="@dimen/new_touchdata_bottom_btn_height"
+                android:background="@mipmap/new_page_num_normal_icon"
+                android:layout_marginLeft="@dimen/new_touchdata_bottom_btn_in_spacing"
+                android:textSize="@dimen/new_page_num_text_size"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/test_page_num"
+                />
+
+
+            <Button
+                android:id="@+id/nextPageBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/new_next_page_btn_style"
+                android:layout_marginLeft="@dimen/new_touchdata_bottom_btn_in_spacing"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+</FrameLayout>

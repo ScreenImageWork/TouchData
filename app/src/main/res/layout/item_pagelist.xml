@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:layout_marginTop="13dp"
+        >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+<!--  android:layout_height="@dimen/pagelist_image_height" -->
+        <ImageView
+            android:id="@+id/pageThum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <!-- title  -->
+        <FrameLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pagelist_item_title_height"
+            android:background="#88000000"
+            android:paddingLeft="@dimen/pagelist_item_title_paddingleft"
+            android:paddingRight="@dimen/pagelist_item_title_paddingright"
+            android:gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:id="@id/right"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="-10dp"
+                >
+                <ImageView
+                    android:id="@+id/delPageBtn"
+                    android:layout_width="@dimen/pagelist_item_title_closeimage_size"
+                    android:layout_height="@dimen/pagelist_item_title_closeimage_size"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/close_btn_style"
+                    android:clickable="true"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pageName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/pagelist_item_textsize"
+                android:text="name"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:layout_toLeftOf="@id/right"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="45dp"
+                />
+        </FrameLayout>
+
+    </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

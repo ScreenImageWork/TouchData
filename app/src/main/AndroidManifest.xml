@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kedacom.touchdata"
+    android:installLocation="internalOnly"
+    android:versionCode="1"
+    >
+
+    <!--开机自启权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!--在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!--网络访问权限-->
+    <!--网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+     <!-- 悬浮窗 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+     <!--开机启动权限-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--二维码扫描的震动声音-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--打开摄像头-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 系统弹窗 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+
+    <application
+        android:name="com.kedacom.app.TouchDataApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        >
+        <!-- android:windowSoftInputMode="adjustResize"   android:screenOrientation="landscape"-->
+        <activity android:name=".NewTouchDataActivity"
+            android:largeHeap="true"
+            android:excludeFromRecents="false"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <data android:host="touchdata" android:scheme="com.kedacom.touchdata"></data>
+            </intent-filter>
+       </activity>
+
+        <service android:name="com.kedacom.service.BootService"
+            >
+            <intent-filter>
+                <action android:name="com.kedacom.service.BootService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.kedacom.httpserver.service.WebService">
+        </service>
+
+        <!-- 开机自启 -->
+        <receiver android:name="com.kedacom.receiver.BootBroadcastReceiver"
+            >
+            <!-- 开机启动广播 -->
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- 应用安装卸载广播-->
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+            <!-- sdcard挂载广播-->
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <data android:scheme="file">
+                </data>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.kedacom.receiver.NetworkBroadcastReceiver"
+            >
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.kedacom.storagelibrary.receiver.CfgUpdateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.kedacom.mailbox"/>
+                <action android:name="com.kedacom.server.ip"/>
+                <action android:name="com.kedacom.wifi.info"/>
+                <action android:name="com.kedacom.white.board"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

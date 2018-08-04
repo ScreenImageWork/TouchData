@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/menu_panel_width"
+        android:layout_height="@dimen/menu_panel_height"
+        android:padding="@dimen/menu_panel_padding"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+
+        <!-- 上面一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            >
+            <!-- 保存 -->
+            <LinearLayout
+                android:id="@+id/saveBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:id="@+id/saveBtnIv"
+                    android:layout_width="@dimen/menu_btn_img_width"
+                    android:layout_height="@dimen/menu_btn_img_height"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/menu_savebtn_style"
+                    />
+
+                <TextView
+                    android:id="@+id/saveBtnTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/menu_btn_textsize"
+                    android:textColor="@color/menu_text_normal"
+                    android:text="@string/save"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/menu_btn_text_margintop"
+                    />
+            </LinearLayout>
+
+
+            <!-- 邮件分享 -->
+            <LinearLayout
+                android:id="@+id/sendMailBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:id="@+id/sendMailBtnIv"
+                    android:layout_width="@dimen/menu_btn_img_width"
+                    android:layout_height="@dimen/menu_btn_img_height"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/menu_mailbtn_style"
+                    />
+
+                <TextView
+                    android:id="@+id/sendMailBtnTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/menu_btn_textsize"
+                    android:textColor="@color/menu_text_normal"
+                    android:text="@string/sendMail"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/menu_btn_text_margintop"
+                    />
+            </LinearLayout>
+
+
+            <!-- 扫码下载 -->
+            <LinearLayout
+                android:id="@+id/scanQRBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:id="@+id/scanQRBtnIv"
+                    android:layout_width="@dimen/menu_btn_img_width"
+                    android:layout_height="@dimen/menu_btn_img_height"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/menu_qrsharebtn_style"
+                    />
+
+                <TextView
+                    android:id="@+id/scanQRBtnTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/menu_btn_textsize"
+                    android:textColor="@color/menu_text_normal"
+                    android:text="@string/scanQRDownload"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/menu_btn_text_margintop"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 下面一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            >
+
+            <!-- 更换背景 -->
+            <LinearLayout
+                android:id="@+id/changeBgBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|bottom"
+                >
+                <ImageView
+                    android:id="@+id/changeBgBtnIv"
+                    android:layout_width="@dimen/menu_btn_img_width"
+                    android:layout_height="@dimen/menu_btn_img_height"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/menu_changebgbtn_style"
+                    />
+
+                <TextView
+                    android:id="@+id/changeBgBtnTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/menu_btn_textsize"
+                    android:textColor="@color/menu_text_normal"
+                    android:text="@string/changeBg"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/menu_btn_text_margintop"
+                    />
+            </LinearLayout>
+
+
+            <!-- 退出 -->
+            <LinearLayout
+                android:id="@+id/exitBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal|bottom"
+                >
+                <ImageView
+                    android:id="@+id/exitBtnIv"
+                    android:layout_width="@dimen/menu_btn_img_width"
+                    android:layout_height="@dimen/menu_btn_img_height"
+                    android:contentDescription="@string/app_name"
+                    android:background="@drawable/menu_exitbtn_style"
+                    />
+
+                <TextView
+                    android:id="@+id/exitBtnTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/menu_btn_textsize"
+                    android:textColor="@color/menu_text_normal"
+                    android:text="@string/exit"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/menu_btn_text_margintop"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/menu_panel_width"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dialog_bottom_icon_width"
+            android:layout_height="@dimen/dialog_bottom_icon_height"
+            android:contentDescription="@string/app_name"
+            android:background="@mipmap/dialog_bottom_icon"
+            android:layout_marginLeft="@dimen/new_menu_bottom_iv_marginright"
+            />
+
+    </LinearLayout>
+</LinearLayout>

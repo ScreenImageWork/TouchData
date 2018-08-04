@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!-- bottom -->
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touchdata_bottombar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        >
+
+        <!-- 中间 -->
+ <LinearLayout
+     android:id="@+id/center"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    >
+
+     <!-- 手抓-->
+    <Button
+        android:id="@+id/dragBtn"
+        android:layout_width="@dimen/touchdata_bottom_btn_width"
+        android:layout_height="@dimen/touchdata_bottom_btn_height"
+        android:background="@drawable/drag_btn_style"
+        />
+
+    <!-- 铅笔 -->
+    <LinearLayout
+        android:id="@+id/penBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/touchdata_bottom_btn_height"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/touchdata_bottom_btn_spacing"
+        >
+        <FrameLayout
+            android:layout_width="@dimen/touchdata_bottom_btn_width"
+            android:layout_height="@dimen/touchdata_bottom_btn_height">
+        <ImageView
+            android:id="@+id/subPenBtn"
+            android:layout_width="@dimen/touchdata_bottom_btn_width"
+            android:layout_height="@dimen/touchdata_bottom_btn_height"
+            android:background="@mipmap/pen_select_icon"
+            />
+            <View
+                android:id="@+id/colorTag"
+                android:layout_width="@dimen/touchdata_colortag_width"
+                android:layout_height="@dimen/touchdata_colortag_height"
+                android:layout_marginTop="@dimen/touchdata_colortag_py"
+                android:layout_marginLeft="@dimen/touchdata_colortag_px"
+                android:background="@color/white"
+                />
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/subPenIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:background="@mipmap/triangle_normal_icon"
+            android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+            />
+    </LinearLayout>
+
+    <!-- 擦除 -->
+    <LinearLayout
+        android:id="@+id/eraseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/touchdata_bottom_btn_height"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/touchdata_bottom_btn_spacing"
+        >
+        <ImageView
+            android:id="@+id/subEraseBtn"
+            android:layout_width="@dimen/touchdata_bottom_btn_width"
+            android:layout_height="@dimen/touchdata_bottom_btn_height"
+            android:background="@drawable/erase_btn_style"
+            />
+        <ImageView
+            android:id="@+id/subEraseIv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:background="@mipmap/triangle_normal_icon"
+            android:layout_marginLeft="@dimen/touchdata_bottom_btn_in_spacing"
+            />
+    </LinearLayout>
+
+    <!-- 撤销 -->
+    <Button
+        android:id="@+id/undoBtn"
+        android:layout_width="@dimen/touchdata_bottom_btn_width"
+        android:layout_height="@dimen/touchdata_bottom_btn_height"
+        android:background="@drawable/undo_btn_style"
+        android:layout_marginLeft="@dimen/touchdata_bottom_btn_spacing"
+        />
+
+    <!-- 恢复 -->
+    <Button
+        android:id="@+id/redoBtn"
+        android:layout_width="@dimen/touchdata_bottom_btn_width"
+        android:layout_height="@dimen/touchdata_bottom_btn_height"
+        android:background="@drawable/redo_btn_style"
+        android:layout_marginLeft="@dimen/touchdata_bottom_btn_spacing"
+        />
+
+
+    <!-- 恢复 -->
+    <Button
+        android:id="@+id/moreBtn"
+        android:layout_width="@dimen/touchdata_bottom_btn_width"
+        android:layout_height="@dimen/touchdata_bottom_btn_height"
+        android:background="@drawable/more_btn_style"
+        android:layout_marginLeft="@dimen/touchdata_bottom_btn_spacing"
+        />
+
+
+</LinearLayout>
+        <!-- 中间结束 -->
+
+        <!-- 右边开始 -->
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/touchdata_bottom_btn_spacing"
+            android:orientation="horizontal"
+            >
+
+            <!-- 新建白板 -->
+            <Button
+                android:id="@+id/createWbBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/create_wb_btn_style"
+                />
+
+            <!-- 列表查看-->
+            <Button
+                android:id="@+id/browseWbListBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/browse_wb_btn_style"
+                android:layout_marginLeft="@dimen/touchdata_bottom_left_btn__spacing"
+                />
+
+            <!-- 菜单-->
+            <Button
+                android:id="@+id/menuBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:background="@drawable/menu_btn_style"
+                android:layout_marginLeft="@dimen/touchdata_bottom_left_btn__spacing"
+                />
+        </LinearLayout>
+        <!-- 右边结束 -->
+
+
+        <!-- 页码选择 -->
+        <RelativeLayout
+            android:id="@+id/pageNumLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/center"
+            android:layout_toLeftOf="@+id/right"
+            android:layout_marginRight="@dimen/touchadata_pagenum_marginright"
+            android:layout_marginLeft="@dimen/touchadata_pagenum_marginleft"
+            >
+
+            <Button
+                android:id="@+id/preSubPageBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/pre_btn_style"
+                />
+
+            <Button
+                android:id="@+id/nextSubPageBtn"
+                android:layout_width="@dimen/touchdata_bottom_btn_width"
+                android:layout_height="@dimen/touchdata_bottom_btn_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/next_btn_style"
+                />
+
+            <LinearLayout
+                android:id="@+id/selectPageNumBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_toRightOf="@id/preSubPageBtn"
+                android:layout_toLeftOf="@id/nextSubPageBtn"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:clickable="true"
+                >
+
+                <TextView
+                    android:id="@+id/curPageNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/touchadata_pagenum_textsize"
+                    android:textColor="@color/pagenum_normal_textcolor"
+                    android:text="1"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/pageNumBiasLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textSize="@dimen/touchadata_pagenum_textsize"
+                    android:textColor="@color/pagenum_normal_textcolor"
+                    />
+
+                <TextView
+                    android:id="@+id/maxPageNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/touchadata_pagenum_textsize"
+                    android:textColor="@color/pagenum_normal_textcolor"
+                    android:text="1"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <!-- 页码选择结束 -->
+    </RelativeLayout>
+
+    <!-- bottom end -->
+
+    <!-- center -->
+    <com.kedacom.touchdata.whiteboard.view.WhiteBoardView
+        android:id="@+id/mWhiteBoardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        >
+    </com.kedacom.touchdata.whiteboard.view.WhiteBoardView>
+    <!-- center  end-->
+
+    <!-- top -->
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/black"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/wbNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="白板1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:id="@+id/closeWbBtn"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:background="@drawable/transparency_btn_style"
+                android:clickable="true"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/close_btn_normal_icon"
+                    />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

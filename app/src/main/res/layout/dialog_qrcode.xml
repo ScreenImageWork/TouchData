@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#90000000"
+        >
+
+    <LinearLayout
+        android:id="@+id/qrPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@mipmap/qr_bg_icon"
+        android:gravity="center"
+        >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/qrcode_panel_padding_left"
+        android:paddingRight="@dimen/qrcode_panel_padding_right"
+        android:paddingTop="@dimen/qrcode_panel_padding_top"
+        android:paddingBottom="@dimen/qrcode_panel_padding_bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qr_text"
+                android:textSize="@dimen/qrcode_top_textsize"
+                android:text="@string/qr_text1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qr_warning_text"
+                android:textSize="@dimen/qrcode_top_textsize"
+                android:text="@string/qr_text2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qr_text"
+                android:textSize="@dimen/qrcode_top_textsize"
+                android:text="@string/qr_text3"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/qr_text"
+            android:textSize="@dimen/qrcode_top_textsize"
+            android:text="@string/qr_text4"
+            android:gravity="center"
+            />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+        <ImageView
+            android:id="@+id/qrIv"
+            android:layout_width="@dimen/qrcode_width"
+            android:layout_height="@dimen/qrcode_height"
+            android:background="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            />
+
+            <ImageView
+                android:id="@+id/qrLoadingIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/qr_loading_anim"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+        <!-- 底部wiff账号和密码 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <!-- 标题 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="right"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/qrcode_bottom_textsize"
+                    android:textColor="@color/qr_text"
+                    android:text="无线热点:"
+                    android:layout_above="@+id/wifiPsdTv"
+                    android:gravity="center"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/qrcode_bottom_textsize"
+                    android:textColor="@color/qr_text"
+                    android:text="密码:"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    />
+
+                </LinearLayout>
+
+
+             <!-- 内容 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="left"
+                >
+                <TextView
+                    android:id="@+id/wifiNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/qrcode_bottom_textsize"
+                    android:textColor="@color/qr_warning_text"
+                    android:text="Nexvision"
+                    android:gravity="center"
+                    android:layout_above="@+id/wifiPsdTv"
+                    />
+
+                <TextView
+                    android:id="@+id/wifiPsdTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/qrcode_bottom_textsize"
+                    android:textColor="@color/qr_warning_text"
+                    android:text="1234567890"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

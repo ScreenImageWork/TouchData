@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="trasparency">#00000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#000000</color>
+    <color name="blackAlpha50">#99000000</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="lightBlack">#888888</color>
+    <color name="blue">#0000ff</color>
+    <color name="red">#ff0000</color>
+
+    <color name="progress_background_color">#b1b1b1</color>
+    <color name="progress_foreground_color">#00aff2</color>
+
+    <color name="horizontal_line">#333333</color>
+
+    <color name="page_title_textColor">#6d6d6d</color>
+    <color name="page_label_textColor">#333333</color>
+    <color name="page_edit_textColor">#333333</color>
+    <color name="page_edit_normal_color">#b1b1b1</color>
+    <color name="page_edit_select_color">#0088e7</color>
+
+    <color name="page_content_tvTextColor">#333333</color>
+
+    <color name="switcherase_text_normal">#b1b1b1</color>
+    <color name="switcherase_text_select">#00aff2</color>
+    <color name="moremenu_scale_text">#ffffff</color>
+    <color name="moremenu_text_normal">#b1b1b1</color>
+    <color name="moremenu_text_select">#00aff2</color>
+
+    <color name="menu_text_normal">#b1b1b1</color>
+    <color name="menu_text_select">#00aff2</color>
+
+    <color name="divider_line">#333333</color>
+
+    <color name="edit_normal_color">#333333</color>
+    <color name="edit_select_color">#0088e7</color>
+
+    <color name="qr_text">#000000</color>
+    <color name="qr_warning_text">#00aff2</color>
+
+    <color name="dialog_textColor">#333333</color>
+    <color name="dialog_btn_text_select_color">#ffffff</color>
+    <color name = "dialog_btn_text_normal_color">#333333</color>
+    <color name="dialog_btn_normalColor">#d6d6d6</color>
+    <color name="dialog_btn_pressedColor">#0088e7</color>
+    <color name="dialog_btn_focusColor">#00aff2</color>
+
+    <color name="pagenum_normal_textcolor">#b1b1b1</color>
+    <color name="pagenum_select_textcolor">#00aff2</color>
+
+
+    <color name="switch_file_text_normal">#b1b1b1</color>
+    <color name="switch_file_text_select">#00aff2</color>
+
+    <!-- <color name="background_normal">#202d35</color> -->
+
+    <color name="background_normal">#2c2f33</color>
+
+    <color name="switch_storage_device_text_normal_color">#0088e7</color>
+    <color name="switch_storage_device_text_select_color">#b1b1b1</color>
+
+
+    <!--二维码扫描界面-->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+
+    <color name="scrollbar">#333333</color>
+    
+    
+    <color name="dialog_bk">#d6d6d6</color>
+    <color name="dialog_title_text_color">#ffffff</color>
+    <color name="dialog_title_bottom_line_color">#373737</color>
+    <color name="dialog_content_color">#333333</color>
+    <color name="dialog_title_bk_color">#282828</color>
+    
+    <color name="dialog_pagethumbnail_deleteBar_textNormalColor">#b6b6b6</color>
+    <color name="dialog_pagethumbnail_deleteBar_textDisableColor">#262626</color>
+
+    <color name="savedialog_saveAllBtn_textColor">#5e5e5e</color>
+
+    <color name="sendMaildialog_hint_tvColor">#5e5e5e</color>
+
+
+    <color name="centerHintToastBk">#141414</color>
+    <color name="centerHintToastTextColor">#b1b1b1</color>
+
+
+    <color name="saveFileSuccessDilaogFilePathColor">#0088e7</color>
+
+    <color name="dialog_sendMail_hint_color">#4e4e4e</color>
+
+    <color name="dialog_switchSaveDev_color">#b1b1b1</color>
+
+    <color name="thumbnailDialog_Bg">#1f1f1f</color>
+
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pagenum_list_item_height"
+        >
+
+        <ImageView
+            android:id="@+id/selectIv"
+            android:layout_width="@dimen/pagenum_list_item_image_width"
+            android:layout_height="@dimen/pagenum_list_item_image_height"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/page_select_icon"
+            />
+
+    <TextView
+        android:id="@+id/pageNumTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/pagenum_list_item_textsize"
+        android:textColor="@color/pagenum_normal_textcolor"
+        android:layout_centerInParent="true"
+        android:text="1"
+        />
+    </RelativeLayout>
+</LinearLayout>

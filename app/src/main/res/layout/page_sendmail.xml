@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center"
+    >
+    <com.kedacom.touchdata.whiteboard.dialog.view.SoftKeyboardMonitor
+        android:id="@+id/softKeyboardMonitor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/sendMaildialog_width"
+        android:layout_height="@dimen/sendMaildialog_height"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@color/dialog_bk"
+        android:layout_gravity="center"
+        >
+
+        <RelativeLayout
+            android:id="@+id/dialogTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_title_height"
+            android:background="@color/dialog_title_bk_color"
+            >
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_title_height"
+            android:textSize="@dimen/dialog_title_textsize"
+            android:textColor="@color/dialog_title_text_color"
+            android:gravity="left|center_vertical"
+            android:text="@string/sendMail"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="@dimen/dialog_title_text_pading_left"
+            />
+
+            <Button
+                android:id="@+id/xbtn"
+                android:layout_width="@dimen/dialog_x_btn_width"
+                android:layout_height="@dimen/dialog_x_btn_height"
+                android:background="@drawable/dialog_x_btn_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dialog_x_btn_margin_right"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dialog_title_bottom_line_color"
+            android:visibility="gone"
+            ></View>
+
+
+
+        <LinearLayout
+            android:id="@+id/dialogBottom"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/dialog_bottom_btn_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:weightSum="2"
+            >
+
+            <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                android:id="@+id/sureBtn"
+                android:layout_width="@dimen/dialog_btnWidth"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/dialog_btnTextSize"
+                android:textColor="@color/dialog_btn_text_normal_color"
+                android:background="@drawable/dialog_btn_style2"
+                android:text="@string/send"
+                android:layout_weight="1"
+                />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#b1b1b1"
+                ></View>
+
+            <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                android:id="@id/cancelBtn"
+                android:layout_width="@dimen/dialog_btnWidth"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/dialog_btnTextSize"
+                android:textColor="@color/dialog_btn_text_normal_color"
+                android:background="@drawable/dialog_btn_style2"
+                android:layout_marginLeft="@dimen/dialog_btnSpace"
+                android:text="@string/cancel"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#b1b1b1"
+            android:layout_above="@+id/dialogBottom"
+            >
+        </View>
+
+
+
+        <!-- 只是一个布局，为了实现自适应 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:baselineAligned="false"
+            android:layout_below="@+id/dialogTitleLayout"
+            android:layout_above="@+id/bottomLine"
+            >
+            <!-- 中间布局 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingLeft="@dimen/sendMaildialog_content_padingleft"
+                android:paddingRight="@dimen/sendMaildialog_content_padingright"
+                >
+
+                <!-- 第一行 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/page_lineHeight"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/left1"
+                        android:layout_width="@dimen/page_label_mail_width"
+                        android:layout_height="@dimen/page_edit_height"
+                        android:textSize="@dimen/page_label_textSize"
+                        android:textColor="@color/page_label_textColor"
+                        android:text="@string/style"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="bottom"
+                        />
+
+                    <com.kedacom.touchdata.whiteboard.dialog.view.TPEditText
+                        android:id="@+id/titleEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/page_edit_height"
+                        android:textSize="@dimen/page_edit_textSize"
+                        android:textColor="@color/page_edit_textColor"
+                        android:layout_toRightOf="@+id/left1"
+                        android:background="@drawable/edit_bg_style"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/page_edit_marginRight"
+                        android:gravity="right|bottom"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        />
+
+                </RelativeLayout>
+
+                <!-- 第二行 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/page_lineSpacing"
+                    >
+
+                    <TextView
+                        android:id="@+id/left2"
+                        android:layout_width="@dimen/page_label_mail_width"
+                        android:layout_height="@dimen/page_edit_height"
+                        android:textSize="@dimen/page_label_textSize"
+                        android:textColor="@color/page_label_textColor"
+                        android:text="@string/receiver"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="bottom"
+                    />
+
+                    <com.kedacom.touchdata.whiteboard.dialog.view.TPEditText
+                        android:id="@+id/contentEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/page_edit_textSize"
+                        android:textColor="@color/page_edit_textColor"
+                        android:layout_toRightOf="@+id/left2"
+                        android:background="@drawable/edit_bg_style"
+                        android:hint="@string/receiverAdrHint"
+                        android:gravity="right|bottom"
+                        android:layout_marginRight="@dimen/page_edit_marginRight"
+                        android:textColorHint="@color/dialog_sendMail_hint_color"
+                        android:maxHeight="80dp"
+                        android:minHeight="@dimen/page_edit_height"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:inputType="textEmailAddress|textMultiLine"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/hintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="right|center_vertical"
+                    android:visibility="visible"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/sendMaildialog_hint_iconWidth"
+                        android:layout_height="@dimen/sendMaildialog_hint_iconHeight"
+                        android:background="@mipmap/hint_icon"
+                        />
+                    <TextView
+                        android:id="@+id/hintTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sendMaildialog_hint_tvSize"
+                        android:text="请输入收件人邮箱！"
+                        android:textColor="@color/sendMaildialog_hint_tvColor"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    </com.kedacom.touchdata.whiteboard.dialog.view.SoftKeyboardMonitor>
+
+</FrameLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/moremenu_panel_width"
+        android:layout_height="@dimen/moremenu_panel_height"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:paddingLeft="@dimen/moremenu_panel_paddingleft"
+        android:paddingTop="@dimen/moremenu_panel_paddingtop"
+        android:paddingRight="@dimen/moremenu_panel_paddingright"
+        android:paddingBottom="@dimen/moremenu_panel_paddingbottom"
+        >
+
+        <!-- 第一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/zoomOutBtn"
+                android:layout_width="@dimen/moremenu_panel_btnwidth"
+                android:layout_height="@dimen/moremenu_panel_btnheight"
+                android:background="@drawable/zoomout_btn_style"
+                />
+
+            <TextView
+                android:id="@+id/scaleTextView"
+                android:layout_width="@dimen/moremenu_panel_scaletv_width"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/moremenu_panel_textsize"
+                android:text="100%"
+                android:textColor="@color/moremenu_scale_text"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/zoomInBtn"
+                android:layout_width="@dimen/moremenu_panel_btnwidth"
+                android:layout_height="@dimen/moremenu_panel_btnheight"
+                android:background="@drawable/zoomin_btn_style"
+                />
+
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/horizontal_line"
+            android:layout_marginTop="@dimen/moremenu_panel_line_margintop"
+            android:layout_marginBottom="@dimen/moremenu_panel_line_marginbottom"
+            ></View>
+
+      <!-- 第二行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            >
+       <!-- 左旋转 -->
+            <RelativeLayout
+                android:id="@+id/rotateLeftLy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/rotateLeftIv"
+                    android:layout_width="@dimen/moremenu_panel_btnwidth"
+                    android:layout_height="@dimen/moremenu_panel_btnheight"
+                    android:contentDescription="@string/app_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/rotateleft_normal_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/rotateLeftTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/moremenu_panel_textsize"
+                    android:textColor="@color/moremenu_text_normal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/rotateLeft"
+                    />
+            </RelativeLayout>
+
+            <!-- 右旋转 -->
+            <RelativeLayout
+                android:id="@+id/rotateRightLy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/rotateRightIv"
+                    android:layout_width="@dimen/moremenu_panel_btnwidth"
+                    android:layout_height="@dimen/moremenu_panel_btnheight"
+                    android:contentDescription="@string/app_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/rotateright_normal_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/rotateRightTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/moremenu_panel_textsize"
+                    android:textColor="@color/moremenu_text_normal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/rotateRight"
+                    />
+            </RelativeLayout>
+
+            <!-- 高度自适 -->
+            <RelativeLayout
+                android:id="@+id/heightSelfLy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/heightSelfIv"
+                    android:layout_width="@dimen/moremenu_panel_btnwidth"
+                    android:layout_height="@dimen/moremenu_panel_btnheight"
+                    android:contentDescription="@string/app_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/heightself_normal_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/heightSelfTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/moremenu_panel_textsize"
+                    android:textColor="@color/moremenu_text_normal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/heightSelf"
+                    />
+            </RelativeLayout>
+
+                 <!-- 宽度自适 -->
+            <RelativeLayout
+                android:id="@+id/widthSelfLy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/widthSelfIv"
+                    android:layout_width="@dimen/moremenu_panel_btnwidth"
+                    android:layout_height="@dimen/moremenu_panel_btnheight"
+                    android:contentDescription="@string/app_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/widthself_normal_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/widthSelfTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/moremenu_panel_textsize"
+                    android:textColor="@color/moremenu_text_normal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/widthSelf"
+                    />
+            </RelativeLayout>
+
+            <!-- 原尺寸 -->
+            <RelativeLayout
+                android:id="@+id/oneToOneLy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/oneToOneIv"
+                    android:layout_width="@dimen/moremenu_panel_btnwidth"
+                    android:layout_height="@dimen/moremenu_panel_btnheight"
+                    android:contentDescription="@string/app_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/onetoone_normal_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/oneToOneTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/moremenu_panel_textsize"
+                    android:textColor="@color/moremenu_text_normal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/oneToOne"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/moremenu_panel_width"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/trasparency"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dialog_bottom_icon_width"
+            android:layout_height="@dimen/dialog_bottom_icon_height"
+            android:contentDescription="@string/app_name"
+            android:background="@mipmap/dialog_bottom_icon"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

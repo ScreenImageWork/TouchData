@@ -1,0 +1,89 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+def buildTime() {
+    def df = new SimpleDateFormat("yyyyMMddHHmm")
+    //df.setTimeZone(TimeZone.getTimeZone("UTC+08:00"))
+    return df.format(new Date())
+}
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        applicationId "com.kedacom.touchdata"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1006
+        versionName "${buildTime()}"
+    }
+
+   //签名
+    signingConfigs {
+        myConfig {
+            storeFile file("../../../build/keystore/nexversion.keystore")     //签名文件
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"  //签名密码
+        }
+    }
+
+    buildTypes {
+        release {
+	    signingConfig signingConfigs.myConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//
+//    task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+//        destinationDir file("$projectDir/libs")
+//        baseName "Native_Libs2"
+//        extension "jar"
+//        from fileTree(dir: "libs", include: "**/*.so")
+//        into "lib"
+//    }
+//
+//    tasks.withType(JavaCompile) {
+//        compileTask -> compileTask.dependsOn(nativeLibsToJar)
+//    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res', 'src/main/res/drawable-mdpi']
+            java.srcDirs = ['src/main/java', 'src/main/java/ewewe']
+        }
+    }
+
+//    packagingOptions {
+//        exclude 'META-INF/LICENSE.txt'
+//        exclude 'META-INF/NOTICE.txt'
+//    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    android { useLibrary 'org.apache.http.legacy' }
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/httpcore-4.3.2.jar')
+    implementation files('libs/mail.jar')
+    implementation files('libs/moffice-service-base.jar')
+    implementation files('libs/moffice-service.jar')
+    implementation files('libs/Native_Libs2.jar')
+    implementation files('libs/StorageManger.jar')
+    implementation files('libs/TPLog.jar')
+    implementation files('libs/vudroid.jar')
+    implementation files('libs/zxing.jar')
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation files('libs/Native_Libs.jar')
+    implementation files('libs/kdmediasdk.jar')
+    implementation files('libs/mtcapi-jni.jar')
+}

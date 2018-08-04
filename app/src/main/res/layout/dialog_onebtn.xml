@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center"
+    >
+    
+    <RelativeLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="@dimen/dialog_height"
+        android:orientation="horizontal"
+        android:background="@color/dialog_bk"
+        >
+
+    <RelativeLayout
+        android:id="@+id/dialogTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_title_height"
+        android:background="@color/dialog_title_bk_color"
+        >
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_title_height"
+            android:textSize="@dimen/dialog_title_textsize"
+            android:textColor="@color/dialog_title_text_color"
+            android:gravity="left|center_vertical"
+            android:text="@string/hints"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="@dimen/dialog_title_text_pading_left"
+            />
+
+        <Button
+            android:id="@+id/xbtn"
+            android:layout_width="@dimen/dialog_x_btn_width"
+            android:layout_height="@dimen/dialog_x_btn_height"
+            android:background="@drawable/dialog_x_btn_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dialog_x_btn_margin_right"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dialog_title_bottom_line_color"
+            android:visibility="gone"
+            ></View>
+
+
+
+        <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButtonFromLinearLayout
+            android:id="@id/dialogSureBtn"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/dialog_bottom_btn_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@drawable/dialog_btn_style2"
+            >
+        <TextView
+            android:id="@+id/dialogSureBtnTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/dialog_btnTextSize"
+            android:textColor="@color/dialog_btn_text_normal_color"
+            android:text="@string/sure"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="0dp"
+                android:gravity="center"
+                >
+            <TextView
+                android:id="@+id/timeTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#0088e7"
+                android:text="("
+                android:layout_marginLeft="3dp"
+                />
+            <com.kedacom.touchdata.whiteboard.view.TimeView
+                android:id="@+id/timeingView"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#0088e7"
+                android:text="10s"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/timeTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#0088e7"
+                android:text=")"
+                />
+            </LinearLayout>
+     </com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButtonFromLinearLayout>
+
+        <View
+            android:id="@+id/bottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#b1b1b1"
+            android:layout_above="@+id/dialogSureBtn"
+            >
+        </View>
+
+        <TextView
+            android:id="@+id/msgTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/dialog_content_textsize"
+            android:textColor="@color/dialog_content_color"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text="content"
+            android:layout_below="@+id/dialogTitleLayout"
+            android:layout_above="@+id/bottomLine"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    
+    
+
+</LinearLayout>

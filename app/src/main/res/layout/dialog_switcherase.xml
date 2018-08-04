@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/switcherase_panel_width"
+        android:layout_height="@dimen/switcherase_panel_height"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/switcherase_panel_paddingtop"
+        android:paddingLeft="@dimen/switcherase_panel_padding_lr"
+        android:paddingRight="@dimen/switcherase_panel_padding_lr"
+        android:paddingBottom="@dimen/switcherase_panel_paddingtop"
+        android:background="@color/black"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
+        <!-- 擦除 -->
+        <RelativeLayout
+            android:id="@+id/eraseLy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            >
+            <ImageView
+                android:id="@+id/eraseImageView"
+                android:layout_width="@dimen/switcherase_panel_img_width"
+                android:layout_height="@dimen/switcherase_panel_img_height"
+                android:contentDescription="@string/app_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/erase_normal_icon"
+                />
+
+            <TextView
+                android:id="@+id/eraseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/switcherase_panel_textsize"
+                android:textColor="@color/switcherase_text_normal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/erase"
+                />
+        </RelativeLayout>
+
+
+        <!-- 区域擦除 -->
+        <RelativeLayout
+            android:id="@+id/areaEraseLy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            >
+            <ImageView
+                android:id="@+id/areaEraseImageView"
+                android:layout_width="@dimen/switcherase_panel_img_width"
+                android:layout_height="@dimen/switcherase_panel_img_height"
+                android:contentDescription="@string/app_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/areaerase_normal_icon"
+                />
+
+            <TextView
+                android:id="@+id/areaEraseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/switcherase_panel_textsize"
+                android:textColor="@color/switcherase_text_normal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/areaErase"
+                />
+        </RelativeLayout>
+
+        <!-- 清屏 -->
+        <RelativeLayout
+            android:id="@+id/clearScreenLy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:clickable="true"
+            >
+            <ImageView
+                android:id="@+id/clearImageView"
+                android:layout_width="@dimen/switcherase_panel_img_width"
+                android:layout_height="@dimen/switcherase_panel_img_height"
+                android:contentDescription="@string/app_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/clearscreen_btn_style"
+                />
+
+            <TextView
+                android:id="@+id/clearScreenTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/switcherase_panel_textsize"
+                android:textColor="@color/switcherase_text_normal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/clrearScreen"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/switcherase_panel_width"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="@dimen/dialog_bottom_icon_width"
+            android:layout_height="@dimen/dialog_bottom_icon_height"
+            android:background="@mipmap/dialog_bottom_icon"
+            />
+    </LinearLayout>
+
+</LinearLayout>

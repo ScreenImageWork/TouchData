@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@color/black"
+            android:layout_weight="1"
+            android:minWidth="100dp"
+            >
+            <TextView
+                android:id="@+id/wbNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/wb_name_tv_textsize"
+                android:textColor="@color/white"
+                android:text="白板1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingRight="@dimen/wb_name_tv_paddingright"
+                android:layout_marginRight="@dimen/wb_name_tv_marginrigth"
+                android:layout_marginLeft="@dimen/wb_name_tv_marginleft"
+                android:minWidth="@dimen/wb_name_tv_minwidth"
+                android:maxWidth="@dimen/wb_name_tv_maxwdith"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                />
+
+                <ImageView
+                    android:id="@+id/closeWbBtn"
+                    android:layout_width="@dimen/pagelist_item_title_closeimage_size"
+                    android:layout_height="@dimen/pagelist_item_title_closeimage_size"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/close_btn_style"
+                    android:clickable="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    />
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

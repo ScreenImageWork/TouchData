@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="360px"
+        android:layout_height="180px"
+        android:background="#141414"
+        android:paddingTop="43px"
+        android:paddingBottom="30px"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dcsQuitRedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/dcsQuitRedioIcon"
+                        android:layout_width="@dimen/switchSaveDeviceDialog_redio_icon_width"
+                        android:layout_height="@dimen/switchSaveDeviceDialog_redio_icon_height"
+                        android:background="@mipmap/dcs_redio_true"
+                        />
+
+                    <TextView
+                        android:id="@+id/dcsQuitRedioTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quitDataConf"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="18px"
+                        android:textColor="#00aff2"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dcsOverRedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30px"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/dcsOverRedioIcon"
+                        android:layout_width="@dimen/switchSaveDeviceDialog_redio_icon_width"
+                        android:layout_height="@dimen/switchSaveDeviceDialog_redio_icon_height"
+                        android:background="@mipmap/dcs_redio_false"
+                        />
+
+                    <TextView
+                        android:id="@+id/dcsOverRedioTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/overDataConf"
+                        android:layout_marginLeft="18px"
+                        android:textSize="11sp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                android:id="@+id/sureBtn"
+                android:layout_width="150px"
+                android:layout_height="36px"
+                android:background="#1e1e1e"
+                android:text="@string/sure"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#b1b1b1"
+                android:textSize="11sp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="8dp"
+        android:background="@mipmap/dialog_bottom_icon"
+        android:layout_below="@+id/interface1"
+        android:layout_gravity="center_horizontal"
+        />
+</LinearLayout>

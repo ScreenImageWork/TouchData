@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <RelativeLayout
+        android:layout_width="@dimen/pagenum_list_width"
+        android:layout_height="match_parent"
+        >
+
+    <ImageView
+        android:id="@+id/bottom"
+        android:layout_width="@dimen/dialog_bottom_icon_width"
+        android:layout_height="@dimen/dialog_bottom_icon_height"
+        android:background="@mipmap/dialog_bottom_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+
+
+    <ListView
+        android:id="@+id/pageNumList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="@dimen/pagenum_list_dividerheight"
+        android:background="@color/black"
+        android:divider="@color/trasparency"
+        android:paddingTop="@dimen/pagenum_list_item_paddingtop"
+        android:paddingBottom="@dimen/pagenum_list_item_paddingbottom"
+        android:layout_above="@+id/bottom"
+
+    ></ListView>
+
+    </RelativeLayout>
+
+</LinearLayout>

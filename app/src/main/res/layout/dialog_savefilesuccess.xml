@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center"
+    >
+    <RelativeLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="@dimen/dialog_height"
+        android:orientation="horizontal"
+        android:background="@color/dialog_bk"
+        >
+
+        <RelativeLayout
+            android:id="@+id/dialogTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_title_height"
+            android:background="@color/dialog_title_bk_color"
+            >
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/dialog_title_textsize"
+            android:textColor="@color/dialog_title_text_color"
+            android:gravity="left|center_vertical"
+            android:text="@string/hints"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="@dimen/dialog_title_text_pading_left"
+            />
+
+
+        <Button
+            android:id="@+id/xbtn"
+            android:layout_width="@dimen/dialog_x_btn_width"
+            android:layout_height="@dimen/dialog_x_btn_height"
+            android:background="@drawable/dialog_x_btn_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dialog_x_btn_margin_right"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dialog_title_bottom_line_color"
+            android:visibility="gone"
+            ></View>
+
+
+
+        <LinearLayout
+            android:id="@+id/dialogBottom"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/dialog_bottom_btn_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:weightSum="2"
+            >
+
+            <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                android:id="@id/dialogOpenFileDir"
+                android:layout_width="@dimen/dialog_btnWidth"
+                android:layout_height="@dimen/dialog_btnHeight"
+                android:textSize="@dimen/dialog_btnTextSize"
+                android:textColor="@color/white"
+                android:background="@drawable/dialog_btn_style2"
+                android:text="@string/openFilePosition"
+                android:visibility="gone"
+                />
+
+            <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                android:id="@id/dialogCancelBtn"
+                android:layout_width="@dimen/dialog_btnWidth2"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/dialog_btnTextSize"
+                android:textColor="@color/dialog_textColor"
+                android:background="@drawable/dialog_btn_style2"
+                android:text="@string/keepUsing"
+                android:layout_weight="1"
+                />
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#b1b1b1"
+                ></View>
+
+            <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                android:id="@+id/exitBtn"
+                android:layout_width="@dimen/dialog_btnWidth2"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/dialog_btnTextSize"
+                android:textColor="@color/dialog_textColor"
+                android:background="@drawable/dialog_btn_style2"
+                android:text="@string/exitWb"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#b1b1b1"
+            android:layout_above="@+id/dialogBottom"
+            >
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/dialogTitleLayout"
+            android:layout_above="@+id/bottomLine"
+            android:gravity="center"
+            >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dialog_textSize"
+                android:textColor="@color/dialog_textColor"
+                android:text="@string/savePosition"
+                />
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/filePath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dialog_textSize"
+                    android:textColor="@color/saveFileSuccessDilaogFilePathColor"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    android:text="本机文件/Nexvision/whiteboard/20180426"
+                    android:layout_marginTop="@dimen/dialog_saveFileSuccess_text_HightSpace"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/saveFileSuccessDilaogFilePathColor"
+                    ></View>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

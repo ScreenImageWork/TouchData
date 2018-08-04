@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/thumbnailDialog_Bg"
+    >
+    <!--     android:background="#0080ff"
+   android:padding="5dp" -->
+    <!-- 底部删除行 -->
+    <LinearLayout
+        android:id="@+id/delBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dialog_pagethumbnail_deleteBar_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/delAllWbBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dialog_pagethumbnail_deleteBar_marginBottom"
+            android:gravity="center"
+        >
+
+            <ImageView
+                android:id="@+id/delAllWbBtnIcon"
+                android:layout_width="@dimen/dialog_pagethumbnail_deleteBar_delAllWbBtnIconWidth"
+                android:layout_height="@dimen/dialog_pagethumbnail_deleteBar_delAllWbBtnIconHeight"
+                android:background="@mipmap/del_normal_icon"
+                />
+
+            <TextView
+                android:id="@+id/delAllWbBtnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delAllWb"
+                android:textSize="@dimen/dialog_pagethumbnail_deleteBar_textSize"
+                android:textColor="@color/dialog_pagethumbnail_deleteBar_textNormalColor"
+                android:layout_marginLeft="@dimen/dialog_pagethumbnail_deleteBar_delAllWbBtnIconToTextSpace"
+                />
+        </LinearLayout>
+
+        <!--  确认删除-->
+        <RelativeLayout
+            android:id="@+id/isDelAllWbLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dialog_pagethumbnail_deleteBar_marginBottom"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/isDelAllWb"
+                android:textSize="@dimen/dialog_pagethumbnail_deleteBar_textSize"
+                android:textColor="@color/dialog_pagethumbnail_deleteBar_textNormalColor"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                />
+
+
+            <Button
+                android:id="@+id/isDelAllWbLayoutCancelBtn"
+                android:layout_width="@dimen/dialog_pagethumbnail_deleteBar_btnWidth"
+                android:layout_height="@dimen/dialog_pagethumbnail_deleteBar_btnHeight"
+                android:background="@drawable/del_all_page_celbtn_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <Button
+                android:id="@+id/isDelAllWbLayoutSureBtn"
+                android:layout_width="@dimen/dialog_pagethumbnail_deleteBar_btnWidth"
+                android:layout_height="@dimen/dialog_pagethumbnail_deleteBar_btnHeight"
+                android:background="@drawable/del_all_page_surebtn_style"
+                android:layout_toLeftOf="@+id/isDelAllWbLayoutCancelBtn"
+                android:layout_marginRight="@dimen/dialog_pagethumbnail_deleteBar_btnSpace"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:layout_marginBottom="47dp"
+        >
+
+        <com.kedacom.touchdata.whiteboard.view.DelAllWbBtn
+            android:id="@+id/delAllBtn"
+            android:layout_width="120dp"
+            android:layout_height="27dp"
+            android:text="加入会议"
+            android:layout_toRightOf="@+id/menuBtn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_above="@+id/delBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_gravity= "center_horizontal"
+        >
+        <!-- android:layoutAnimation="@anim/list_item_layout" -
+        android:layout_width="@dimen/pagelist_width"
+        -->
+        <com.kedacom.touchdata.whiteboard.view.rmanimlistview.AnimListView
+            android:id="@+id/pageList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dividerHeight="@dimen/pagelist_dividerheight"
+            android:layout_marginLeft="@dimen/pagelist_marginleft"
+            android:layout_marginRight="@dimen/pagelist_marginright"
+            android:layout_marginTop="@dimen/pagelist_margintop"
+            android:layout_marginBottom="@dimen/pagelist_marginbottom"
+            android:background="@color/trasparency"
+            ></com.kedacom.touchdata.whiteboard.view.rmanimlistview.AnimListView>
+
+        <!-- android:layout_width="@dimen/pagelist_bottom_line_width" -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_line"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="1dp"
+            android:visibility="gone"
+            ></View>
+    </LinearLayout>
+</RelativeLayout>

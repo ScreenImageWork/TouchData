@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    >
+    
+    <RelativeLayout
+        android:layout_width="370px"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/interface1"
+        android:layout_width="370px"
+        android:layout_height="150px"
+        android:background="#141414"
+        android:paddingLeft="40px"
+        android:paddingTop="43px"
+        android:paddingRight="40px"
+        android:paddingBottom="30px"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:gravity="center_vertical"
+         android:paddingBottom="30px"
+         >
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="11sp"
+             android:text="@string/collaborationMode"
+             android:textColor="#b1b1b1"
+             />
+           
+         <LinearLayout
+             android:id="@+id/dcsMngTalkRedio"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_marginLeft="32px"
+             android:gravity="center_vertical"
+             >
+         <ImageView
+             android:id="@+id/dcsMngTalkRedioIcon"
+             android:layout_width="@dimen/switchSaveDeviceDialog_redio_icon_width"
+             android:layout_height="@dimen/switchSaveDeviceDialog_redio_icon_height"
+             android:background="@mipmap/dcs_redio_true"
+             />
+
+         <TextView
+             android:id="@+id/dcsMngTalkRedioTv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/talk"
+             android:textSize="11sp"
+             android:layout_marginLeft="18px"
+             android:textColor="#00aff2"
+             />
+         </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dcsMngSpeakerRedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="30px"
+                android:gravity="center_vertical"
+                >
+
+         <ImageView
+             android:id="@+id/dcsMngSpeakerRedioIcon"
+             android:layout_width="@dimen/switchSaveDeviceDialog_redio_icon_width"
+             android:layout_height="@dimen/switchSaveDeviceDialog_redio_icon_height"
+             android:background="@mipmap/dcs_redio_false"
+             />
+
+         <TextView
+             android:id="@+id/dcsMngSpeakerRedioTv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/speaker"
+             android:layout_marginLeft="18px"
+             android:textSize="11sp"
+             />
+            </LinearLayout>
+
+
+     </LinearLayout>
+
+        <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+            android:id="@+id/rlsDcsMngerBtn"
+            android:layout_width="150px"
+            android:layout_height="36px"
+            android:background="#1e1e1e"
+            android:text="@string/releaseManagementRight"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#b1b1b1"
+            android:textSize="11sp"
+            android:visibility="gone"
+            />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/interface2"
+        android:layout_width="410px"
+        android:layout_height="180px"
+        android:background="#141414"
+        android:paddingLeft="40px"
+        android:paddingTop="43px"
+        android:paddingRight="40px"
+        android:paddingBottom="30px"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:animateLayoutChanges="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:text="@string/dcsmnger_interface2_hint"
+            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                >
+
+                <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                    android:id="@+id/rlsDcsMngerSureBtn"
+                    android:layout_width="150px"
+                    android:layout_height="36px"
+                    android:background="#1e1e1e"
+                    android:text="@string/sure"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#b1b1b1"
+                    android:textSize="11sp"
+                    />
+
+                <com.kedacom.touchdata.whiteboard.dialog.view.TPDialogButton
+                    android:id="@+id/rlsDcsMngerCancelBtn"
+                    android:layout_width="150px"
+                    android:layout_height="36px"
+                    android:background="#1e1e1e"
+                    android:text="@string/cancel"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#b1b1b1"
+                    android:textSize="11sp"
+                    android:layout_marginLeft="10px"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="370px"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="8dp"
+        android:background="@mipmap/dialog_bottom_icon"
+        android:layout_below="@+id/interface1"
+        />
+    </LinearLayout>
+</LinearLayout>

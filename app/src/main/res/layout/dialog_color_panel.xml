@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center"
+    android:background="@color/trasparency"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <LinearLayout
+        android:layout_width="@dimen/color_panel_width"
+        android:layout_height="@dimen/color_panel_height"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:padding="@dimen/color_panel_padding"
+        >
+
+        <!-- 画笔粗细选择 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/penSize3Px"
+                android:layout_width="@dimen/pen_size_width"
+                android:layout_height="@dimen/pen_size_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/pen_3px_normal_icon"
+                />
+
+            <ImageView
+                android:id="@+id/penSize6Px"
+                android:layout_width="@dimen/pen_size_width"
+                android:layout_height="@dimen/pen_size_height"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/pen_6px_normal_icon"
+                />
+
+            <ImageView
+                android:id="@+id/penSize9Px"
+                android:layout_width="@dimen/pen_size_width"
+                android:layout_height="@dimen/pen_size_height"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/pen_9px_normal_icon"
+                />
+        </RelativeLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/horizontal_line"
+            android:layout_marginTop="@dimen/color_panel_line_margintop"
+            android:layout_marginBottom="@dimen/color_panel_line_marginbottom"
+            ></View>
+
+        <GridView
+            android:id="@+id/colorGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="@dimen/color_gridview_verticalspacing"
+            android:horizontalSpacing="@dimen/color_gridview_horizontalSpacing"
+            android:numColumns="4"
+            android:listSelector="@color/trasparency"
+            >
+        </GridView>
+
+    </LinearLayout>
+        <!-- 左边选择区域结束 -->
+
+
+        <!-- 右边颜色选择器 -->
+        <LinearLayout
+            android:id="@+id/customColorBgView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/color_panel_height"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/color_panel_padding"
+            android:paddingTop="@dimen/custom_color_panel_padding_top"
+            android:paddingBottom="@dimen/custom_color_panel_padding_bottom"
+            android:background="@color/trasparency"
+            >
+        <com.kedacom.touchdata.whiteboard.colorpanel.SwitchColorView
+            android:id="@+id/customColorView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/color_panel_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center"
+        >
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="8dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@mipmap/dialog_bottom_icon"
+        />
+    </LinearLayout>
+</LinearLayout>

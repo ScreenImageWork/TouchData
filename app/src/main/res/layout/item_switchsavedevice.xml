@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+   android:gravity="center" 
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_gridview_item_height"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:background="@color/dialog_bk"
+        >
+        
+        <ImageView 
+            android:id="@+id/redioBtn"
+            android:layout_width="@dimen/switchSaveDeviceDialog_redio_icon_width"
+            android:layout_height="@dimen/switchSaveDeviceDialog_redio_icon_height"
+            android:contentDescription="@string/app_name"
+            android:background="@drawable/redio_false"
+            />
+        
+        <TextView 
+            android:id="@+id/deviceName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dialog_item_textSize"
+            android:textColor="@color/dialog_textColor"
+            android:text="本机文件"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    
+
+</LinearLayout>

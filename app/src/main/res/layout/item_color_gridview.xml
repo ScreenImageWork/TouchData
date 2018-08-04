@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.kedacom.touchdata.whiteboard.dialog.view.SquareLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        >
+        <FrameLayout
+            android:id="@+id/itemSelectView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"
+            android:background="@color/black"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                />
+        <ImageView
+            android:id="@+id/colorlump"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:layout_margin="2dp"
+            />
+        </FrameLayout>
+    </com.kedacom.touchdata.whiteboard.dialog.view.SquareLayout>
+
+</LinearLayout>
